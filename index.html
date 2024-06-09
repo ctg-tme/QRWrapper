@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moveable Image with Embedded Content</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+  <style>
+    body {
+      padding-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="https://avatars.githubusercontent.com/u/159071680?s=200&v=4" />
+        <h5 class="title is-5 pl-3">CTG - Technical Marketing Engineering</h5>
+      </a>
+    </div>
+  </nav>
+
+  <div class="notification">
+    <h1 class="title 4" id="urlParam-Title">QR Code Wrapper Tool!</h1>
+    <h2 class="subtitle 5" id="urlParam-Description"><em>This site generates QR codes based on input
+        provided in its URL parameters.<br>
+        If you're seeing this message, you're on the base site, you need to add some URL parameters<br>
+        Parameters Include
+        <div class='list'>
+          <ul>
+            <li>- title - A Title for this page [required]</li>
+            <li>- sourceUrl - The URL Content for the QR Code and Title Hyperlink [required]</li>
+            <li>- description - A description of the site contents [optional]</li>
+            <li>- productImageUrl - An image of the Content/Product you're showcasing [optional]</li>
+          </ul>
+        </div>
+        For more information, please check this pages Github Readme
+      </em>
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="box has-text-centered" id="qrContainer">
+      <div class="my-custom-div">
+        <img id="qrImage" src="" alt="loading..."
+          style="border: 5px solid #ffb70f; border-radius: 25px; overflow: hidden;">
+        <div class="content is-centered">
+          Scan the QR above to take this content with you!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <footer class="footer py-5">
+    <div class="content has-text-centered">
+      <p>
+        CTG - Technical Marketing Engineering
+        <span class="icon is-medium">
+          <i class="fa-brands fa-github"></i>
+        </span>
+        <a href="https://github.com/ctg-tme/Advanced-Presenter-Track-Zoning" target="_blank">View on Github</a>
+        © <span id="year">2024</span> Webex by Cisco <br />
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
