@@ -29,7 +29,7 @@ function getParameterByName(name) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  setTimeout(async() => {
+  setTimeout(async () => {
     /**
      * Location of Title ID in HTML
      * 
@@ -118,14 +118,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         </div>
       </div>
     </div>`
-    }
-
-    qrCodeContainerLocation.innerHTML = `<div class="my-custom-div">
+    } else {
+      qrCodeContainerLocation.innerHTML = `<div class="my-custom-div">
     <img id="qrImage" src="${`https://api.qrserver.com/v1/create-qr-code/?size=350X350&margin=10&data=${encodeURIComponent(destinationUrl)}`}" alt="${activeUrlParameters.title}"style="max-height=350; border: 5px solid #ffb70f; border-radius: 25px; overflow: hidden;">
     <div class="content is-centered">
       Scan the QR above to take this content with you!
     </div>
   </div>`
+    }
 
     if (activeUrlParameters.title != null) {
       QrCodeImageLocation.alt = activeUrlParameters.title
